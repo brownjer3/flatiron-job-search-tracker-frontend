@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomeContainer from "./home/HomeContainer";
+import HeaderContainer from "./header/HeaderContainer";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App" id="app-container">
-          {/* <HeaderContainer /> */}
+          <HeaderContainer />
           <Switch>
             {/* <Route path="">
               <Container />
