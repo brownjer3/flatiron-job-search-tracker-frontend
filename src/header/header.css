@@ -20,7 +20,7 @@ nav a {
 
 nav a:hover,
 nav .active {
-  background-color: #484b61;
+  background-color: #3c3f4e;
 }
 
 #header-text {
@@ -28,5 +28,5 @@ nav .active {
 }
 
 .active-link {
-  background-color: #484b61;
+  background-color: #3c3f4e;
 }
