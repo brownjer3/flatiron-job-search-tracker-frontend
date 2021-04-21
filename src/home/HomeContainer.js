@@ -13,12 +13,10 @@ export default class HomeContainer extends Component {
           <i className="far fa-check-circle green"></i>
           <i className="far fa-times-circle red"></i>
         </div>
-
         <div id="commit-blog-container">
           <GithubCommits />
           <BlogPosts />
         </div>
-
         <EmployerContacts />
       </div>
     );

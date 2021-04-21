@@ -8,6 +8,9 @@ export default function Navigation() {
           <NavLink exact to="/" activeClassName="active-link">
             Home
           </NavLink>
+          <NavLink to="/contacts" activeClassName="active-link">
+            Contacts
+          </NavLink>
         </li>
       </ul>
     </nav>
