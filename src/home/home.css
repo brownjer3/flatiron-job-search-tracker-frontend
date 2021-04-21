@@ -50,6 +50,15 @@
   padding: 5px;
 }
 
-#github-commits-form input[type="submit"] {
+#github-commits-form input[type="submit"],
+#blog-post-form input[type="submit"] {
   margin-left: 5px;
+}
+
+#github-commits-form input[type="text"] {
+  width: 50px;
+}
+
+#blog-post-form input[type="text"] {
+  width: 300px;
 }

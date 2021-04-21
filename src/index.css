@@ -29,6 +29,11 @@ form {
   padding: 5px;
 }
 
+form input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+}
+
 .green {
   color: #075a07;
 }
