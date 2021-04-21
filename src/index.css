@@ -15,3 +15,16 @@ body {
 h1 {
   font-family: "Merienda", cursive;
 }
+
+i {
+  font-size: 2em;
+  padding: 0 5px 0 5px;
+}
+
+.fa-check-circle {
+  color: #075a07;
+}
+
+.fa-times-circle {
+  color: #a20707;
+}
