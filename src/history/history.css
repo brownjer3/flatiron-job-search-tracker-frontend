@@ -11,7 +11,7 @@
   border: 1px solid black;
 }
 
-.small-box i {
+.small-box .box-content i {
   font-size: 1.17em;
   padding-left: 2.5px;
 }
