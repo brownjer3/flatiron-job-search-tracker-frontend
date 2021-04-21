@@ -4,6 +4,7 @@
   margin: 0 auto;
   text-align: center;
   padding: 10px;
+  align-content: space-between;
 }
 
 #week-of {
@@ -26,9 +27,16 @@
 }
 
 .medium-box {
-  width: 450px;
-  height: 150px;
+  width: 420px;
+  height: 140px;
   border: 1px solid black;
+}
+
+.large-box {
+  width: 840px;
+  border: 1px solid black;
+  min-height: 280px;
+  margin: 0 auto;
 }
 
 .box-header {
