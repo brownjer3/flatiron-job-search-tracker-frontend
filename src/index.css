@@ -21,6 +21,11 @@ h1 {
   padding: 20px;
 }
 
+h2 {
+  font-family: "Merienda", cursive;
+  padding: 15px;
+}
+
 p {
   padding: 5px;
 }
