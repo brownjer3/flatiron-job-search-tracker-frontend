@@ -4,6 +4,7 @@ import HomeContainer from "./home/HomeContainer";
 import HeaderContainer from "./header/HeaderContainer";
 import ContactsContainer from "./contacts/ContactsContainer";
 import HistoryContainer from "./history/HistoryContainer";
+import AccountContainer from "./account/AccountContainer";
 
 class App extends Component {
   render() {
@@ -18,9 +19,9 @@ class App extends Component {
             <Route path="/history">
               <HistoryContainer />
             </Route>
-            {/* <Route path="">
-              <Container />
-            </Route> */}
+            <Route path="/account">
+              <AccountContainer />
+            </Route>
             <Route path="/">
               <HomeContainer />
             </Route>
