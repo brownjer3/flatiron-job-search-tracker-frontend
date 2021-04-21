@@ -9,4 +9,9 @@
 body {
   background-color: #f4f4f6;
   color: #141301;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Merienda", cursive;
 }
