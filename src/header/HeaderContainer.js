@@ -1,4 +1,5 @@
 import Navigation from "./Navigation";
+import "./header.css";
 
 export default function HeaderContainer() {
   return (
