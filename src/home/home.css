@@ -3,10 +3,44 @@
   flex-direction: column;
   margin: 0 auto;
   text-align: center;
+  padding: 10px;
 }
 
 #week-of {
   display: flex;
   align-items: center;
   margin: 0 auto;
+  padding: 10px;
+}
+
+#week-of i {
+  font-size: 2em;
+  padding: 0 5px 0 5px;
+}
+
+#commit-blog-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.medium-box {
+  width: 450px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.box-header {
+  background-color: #474d71;
+  color: white;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.box-header i {
+  font-size: 1.5em;
+  padding: 0 5px 0 5px;
 }
