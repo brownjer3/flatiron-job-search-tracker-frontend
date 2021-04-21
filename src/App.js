@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomeContainer from "./home/HomeContainer";
 import HeaderContainer from "./header/HeaderContainer";
 import ContactsContainer from "./contacts/ContactsContainer";
+import HistoryContainer from "./history/HistoryContainer";
 
 class App extends Component {
   render() {
@@ -14,10 +15,10 @@ class App extends Component {
             <Route path="/contacts">
               <ContactsContainer />
             </Route>
-            {/* <Route path="">
-              <Container />
+            <Route path="/history">
+              <HistoryContainer />
             </Route>
-            <Route path="">
+            {/* <Route path="">
               <Container />
             </Route> */}
             <Route path="/">

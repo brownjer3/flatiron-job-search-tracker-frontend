@@ -11,6 +11,9 @@ export default function Navigation() {
           <NavLink to="/contacts" activeClassName="active-link">
             Contacts
           </NavLink>
+          <NavLink to="/history" activeClassName="active-link">
+            History
+          </NavLink>
         </li>
       </ul>
     </nav>
