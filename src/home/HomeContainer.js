@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./home.css";
+import GithubCommits from "./GithubCommits";
+import BlogPosts from "./BlogPosts";
+import EmployerContacts from "./EmployerContacts";
 
 export default class HomeContainer extends Component {
   render() {
@@ -12,74 +15,11 @@ export default class HomeContainer extends Component {
         </div>
 
         <div id="commit-blog-container">
-          <div id="github-commits" className="medium-box">
-            <div className="box-header">
-              <h3>Github Commits</h3>
-              <i className="far fa-check-circle light-green"></i>
-              <i className="far fa-times-circle light-red"></i>
-            </div>
-            <div className="box-content">
-              <p>Github Commits: [insert number]</p>
-              <form id="github-commits-form">
-                <label htmlFor="commit_number">Update Commits:</label>
-                <br />
-                <input type="text" name="commit_number" />
-                <input type="submit" />
-              </form>
-            </div>
-          </div>
-
-          <div id="blog-posts" className="medium-box">
-            <div className="box-header">
-              <h3>Blog Post</h3>
-              <i className="far fa-check-circle light-green"></i>
-              <i className="far fa-times-circle light-red"></i>
-            </div>
-            <div className="box-content">
-              <p>Blog Post URL: [display url]</p>
-              <form id="blog-post-form">
-                <label htmlFor="blog_url">Update Blog URL:</label>
-                <br />
-                <input type="text" name="blog_url" />
-                <input type="submit" />
-              </form>
-            </div>
-          </div>
+          <GithubCommits />
+          <BlogPosts />
         </div>
 
-        <div id="employer-contacts" className="large-box">
-          <div className="box-header">
-            <h3>Employer Contacts</h3>
-            <i className="far fa-check-circle light-green"></i>
-            <i className="far fa-times-circle light-red"></i>
-          </div>
-          <div className="box-content">
-            <p>Employer Contacts:</p>
-            <ol>
-              <li>
-                First contact with info
-                <button>Edit</button>
-                <button>Delete</button>
-              </li>
-              <li>
-                Next contact with info
-                <button>Edit</button>
-                <button>Delete</button>
-              </li>
-              <li>
-                Another contact with info
-                <button>Edit</button>
-                <button>Delete</button>
-              </li>
-              <li>
-                Again, a contact with info
-                <button>Edit</button>
-                <button>Delete</button>
-              </li>
-            </ol>
-          </div>
-          <button>Add New Employer Contact</button>
-        </div>
+        <EmployerContacts />
       </div>
     );
   }
