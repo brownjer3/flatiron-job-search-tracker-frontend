@@ -17,7 +17,15 @@ export default class HomeContainer extends Component {
               <i className="far fa-check-circle light-green"></i>
               <i className="far fa-times-circle light-red"></i>
             </div>
-            Commits
+            <div className="box-content">
+              <p>Github Commits: [insert number]</p>
+              <form id="github-commits-form">
+                <label htmlFor="commit_number">Update Commits:</label>
+                <br />
+                <input type="text" name="commit_number" />
+                <input type="submit" />
+              </form>
+            </div>
           </div>
           <div id="blog-posts" className="medium-box">
             <div className="box-header">
@@ -25,7 +33,7 @@ export default class HomeContainer extends Component {
               <i className="far fa-check-circle light-green"></i>
               <i className="far fa-times-circle light-red"></i>
             </div>
-            Posts
+            <div className="box-content">Blog Post URL: [display url]</div>
           </div>
         </div>
       </div>

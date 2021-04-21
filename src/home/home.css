@@ -44,3 +44,12 @@
   font-size: 1.5em;
   padding: 0 5px 0 5px;
 }
+
+.box-content {
+  text-align: left;
+  padding: 5px;
+}
+
+#github-commits-form input[type="submit"] {
+  margin-left: 5px;
+}
