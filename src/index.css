@@ -53,3 +53,35 @@ button {
 .light-red {
   color: #ffebf2;
 }
+
+.medium-box {
+  width: 420px;
+  height: 140px;
+  border: 1px solid black;
+}
+
+.large-box {
+  width: 840px;
+  border: 1px solid black;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.box-header {
+  background-color: #474d71;
+  color: white;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.box-header i {
+  font-size: 1.5em;
+  padding: 0 5px 0 5px;
+}
+
+.box-content {
+  text-align: left;
+  padding: 5px;
+}
