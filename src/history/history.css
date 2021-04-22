@@ -1,0 +1,36 @@
+#history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.small-box {
+  width: 210px;
+  border: 1px solid black;
+}
+
+.small-box .box-content i {
+  font-size: 1.17em;
+  padding-left: 2.5px;
+}
+
+#mbg-valid {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#mbg-valid i {
+  font-size: 2em;
+  padding: 0 5px 0 5px;
+}
+
+#display-history {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}

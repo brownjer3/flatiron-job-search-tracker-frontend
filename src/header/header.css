@@ -1,0 +1,32 @@
+#header-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+
+#header-container li {
+  list-style: none;
+}
+
+nav a {
+  padding: 10px;
+  box-shadow: 5px 5px 5px #1a191a;
+  background-color: #474d71;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav a:hover,
+nav .active {
+  background-color: #3c3f4e;
+}
+
+#header-text {
+  color: #474d71;
+}
+
+.active-link {
+  background-color: #3c3f4e;
+}

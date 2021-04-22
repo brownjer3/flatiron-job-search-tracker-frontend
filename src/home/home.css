@@ -1,0 +1,40 @@
+#home-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  align-content: space-between;
+}
+
+#week-of {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#week-of i {
+  font-size: 2em;
+  padding: 0 5px 0 5px;
+}
+
+#commit-blog-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+#github-commits-form input[type="submit"],
+#blog-post-form input[type="submit"] {
+  margin-left: 5px;
+}
+
+#github-commits-form input[type="text"] {
+  width: 50px;
+}
+
+#blog-post-form input[type="text"] {
+  width: 300px;
+}
