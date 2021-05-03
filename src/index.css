@@ -61,7 +61,7 @@ button {
 
 .medium-box {
   width: 420px;
-  height: 140px;
+  min-height: 140px;
   border: 1px solid black;
 }
 
@@ -89,4 +89,9 @@ button {
 .box-content {
   text-align: left;
   padding: 5px;
+}
+
+#app-container {
+  max-width: 1000px;
+  margin: auto;
 }
