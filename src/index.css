@@ -1,8 +1,8 @@
 /* Color Palette
 
-  Light gray: F4F4F6
-  Blue: 474D71
-  Not Black, Black: 141301
+  Dark gray: 333231
+  Strong Yellow: FFDA3A
+  Bright blue: 48B2F0
 
 */
 
@@ -11,8 +11,8 @@
 }
 
 body {
-  background-color: #f4f4f6;
-  color: #141301;
+  background-color: #333231;
+  color: #f4f4f6;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -44,6 +44,15 @@ button {
   margin-left: 5px;
 }
 
+input[type="submit"] {
+  background-color: #ffda3a;
+  cursor: pointer;
+}
+
+form input {
+  background-color: #fffdf5;
+}
+
 .green {
   color: #075a07;
 }
@@ -72,8 +81,15 @@ button {
   padding-bottom: 10px;
 }
 
+.small-box,
+.medium-box,
+.large-box {
+  color: black;
+  background-color: #f4f4f6;
+}
+
 .box-header {
-  background-color: #474d71;
+  background-color: #48b2f0;
   color: white;
   margin-top: 0;
   display: flex;
