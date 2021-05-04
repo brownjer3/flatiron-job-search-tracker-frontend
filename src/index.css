@@ -40,6 +40,16 @@ button {
   font-size: 1em;
 }
 
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+.user-form-submit {
+  display: block;
+  margin: 0 auto;
+}
+
 button {
   margin-left: 5px;
 }
