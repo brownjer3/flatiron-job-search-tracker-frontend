@@ -12,7 +12,6 @@
 
 body {
   background-color: #333231;
-  color: #f4f4f6;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -42,6 +41,7 @@ button {
 
 button {
   margin-left: 5px;
+  cursor: pointer;
 }
 
 input[type="submit"] {
@@ -49,23 +49,27 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+input[type="submit"]:hover {
+  background-color: #ffe573;
+}
+
 form input {
   background-color: #fffdf5;
 }
 
 .green {
-  color: #075a07;
+  color: #10e010;
 }
 
 .light-green {
-  color: #bbffad;
+  color: #036303;
 }
 .red {
-  color: #a20707;
+  color: #fa0505;
 }
 
 .light-red {
-  color: #ffebf2;
+  color: #b30505;
 }
 
 .medium-box {
@@ -90,7 +94,7 @@ form input {
 
 .box-header {
   background-color: #48b2f0;
-  color: white;
+  color: black;
   margin-top: 0;
   display: flex;
   justify-content: center;
