@@ -12,9 +12,21 @@ export default class LoginForm extends Component {
     this.setState({ ...this.state, [e.target.name]: value });
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(this.state),
+    }).then((resp) => console.log(resp));
+  };
+
   render() {
     return (
-      <form action="/login" method="post" id="login-form">
+      <form id="login-form" onSubmit={this.handleSubmit}>
         <p>
           <label htmlFor="email">Email: </label>
           <br />
