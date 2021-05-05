@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./login.css";
+import LoginForm from "./LoginForm";
 
 export default class LoginContainer extends Component {
   render() {
@@ -10,28 +11,7 @@ export default class LoginContainer extends Component {
           <div className="box-header">
             <h3>Login</h3>
           </div>
-          <form action="/login" method="post" id="login-form">
-            <p>
-              <label htmlFor="email">Email: </label>
-              <br />
-              <input
-                type="email"
-                name="email"
-                placeholder="susie@company.com"
-              />
-            </p>
-            <p>
-              <label htmlFor="password">Password: </label>
-              <br />
-              <input
-                type="password"
-                name="password"
-                placeholder="Enter your password"
-              />
-            </p>
-
-            <input className="user-form-submit" type="submit" />
-          </form>
+          <LoginForm />
         </div>
       </div>
     );
