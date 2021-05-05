@@ -72,6 +72,10 @@ form input {
   color: #b30505;
 }
 
+.white {
+  color: #ffffff;
+}
+
 .medium-box {
   width: 420px;
   min-height: 140px;

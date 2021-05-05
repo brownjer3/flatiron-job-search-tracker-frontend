@@ -8,7 +8,7 @@ export default class HomeContainer extends Component {
   render() {
     return (
       <div id="home-container">
-        <div id="week-of">
+        <div id="week-of" className="white">
           <h2>Week of [Insert Dates here]:</h2>
           <i className="far fa-check-circle green"></i>
           <i className="far fa-times-circle red"></i>

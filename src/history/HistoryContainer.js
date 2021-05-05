@@ -7,7 +7,7 @@ export default class HistoryContainer extends Component {
     return (
       <div id="history-container">
         <div id="mbg-valid">
-          <h2>Valid for MBG:</h2>
+          <h2 className="white">Valid for MBG:</h2>
           <i className="far fa-check-circle green"></i>
           <i className="far fa-times-circle red"></i>
         </div>
