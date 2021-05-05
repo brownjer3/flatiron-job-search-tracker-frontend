@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./home.css";
 import GithubCommits from "./GithubCommits";
 import BlogPosts from "./BlogPosts";
-import EmployerContacts from "./EmployerContacts";
+import JobSearchActivities from "./JobSearchActivities";
 
 export default class HomeContainer extends Component {
   render() {
@@ -17,7 +17,7 @@ export default class HomeContainer extends Component {
           <GithubCommits />
           <BlogPosts />
         </div>
-        <EmployerContacts />
+        <JobSearchActivities />
       </div>
     );
   }
