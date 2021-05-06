@@ -1,11 +1,3 @@
-#history-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 .small-box {
   width: 210px;
   border: 1px solid black;

@@ -5,6 +5,8 @@ import HeaderContainer from "./header/HeaderContainer";
 import ContactsContainer from "./contacts/ContactsContainer";
 import HistoryContainer from "./history/HistoryContainer";
 import AccountContainer from "./account/AccountContainer";
+import LoginContainer from "./login/LoginContainer";
+import SignupContainer from "./signup/SignupContainer";
 
 class App extends Component {
   render() {
@@ -13,6 +15,12 @@ class App extends Component {
         <div className="App" id="app-container">
           <HeaderContainer />
           <Switch>
+            <Route path="/login">
+              <LoginContainer />
+            </Route>
+            <Route path="/signup">
+              <SignupContainer />
+            </Route>
             <Route path="/contacts">
               <ContactsContainer />
             </Route>
