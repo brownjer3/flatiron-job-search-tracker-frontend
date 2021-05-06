@@ -4,7 +4,7 @@ import SignupForm from "./SignupForm";
 export default class SignupContainer extends Component {
   render() {
     return (
-      <div id="login-container">
+      <div id="signup-container">
         <h2>Welcome New User</h2>
         <div className="medium-box">
           <div className="box-header">
