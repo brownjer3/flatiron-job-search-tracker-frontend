@@ -11,7 +11,6 @@ export default class LoginForm extends Component {
   handleChange = (e) => {
     let value = e.target.value;
     this.setState({ user: { ...this.state.user, [e.target.name]: value } });
-    console.log(this.state);
   };
 
   handleSubmit = (e) => {
