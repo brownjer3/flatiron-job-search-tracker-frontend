@@ -2,26 +2,32 @@ import React, { Component } from "react";
 
 export default class LoginForm extends Component {
   state = {
-    email: "",
-    password: "",
+    user: {
+      email: "",
+      password: "",
+    },
   };
 
   handleChange = (e) => {
-    console.log(e.target.value);
     let value = e.target.value;
-    this.setState({ ...this.state, [e.target.name]: value });
+    this.setState({ user: { ...this.state.user, [e.target.name]: value } });
+    console.log(this.state);
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/users", {
+    fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify(this.state),
-    }).then((resp) => console.log(resp));
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        localStorage.setItem("token", data.jwt);
+      });
   };
 
   render() {
