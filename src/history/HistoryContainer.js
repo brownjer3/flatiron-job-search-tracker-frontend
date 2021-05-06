@@ -5,7 +5,7 @@ import DisplayHistory from "./DisplayHistory";
 export default class HistoryContainer extends Component {
   render() {
     return (
-      <div id="history-container">
+      <div className="content-container">
         <div id="mbg-valid">
           <h2>Valid for MBG:</h2>
           <i className="far fa-check-circle green"></i>
