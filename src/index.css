@@ -1,8 +1,8 @@
 /* Color Palette
 
-  Light gray: F4F4F6
-  Blue: 474D71
-  Not Black, Black: 141301
+  Dark gray: 333231
+  Strong Yellow: FFDA3A
+  Bright blue: 48B2F0
 
 */
 
@@ -11,8 +11,7 @@
 }
 
 body {
-  background-color: #f4f4f6;
-  color: #141301;
+  background-color: #333231;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -42,21 +41,39 @@ button {
 
 button {
   margin-left: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  background-color: #ffda3a;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #ffe573;
+}
+
+form input {
+  background-color: #fffdf5;
 }
 
 .green {
-  color: #075a07;
+  color: #10e010;
 }
 
-.light-green {
-  color: #bbffad;
+.dark-green {
+  color: #036303;
 }
 .red {
-  color: #a20707;
+  color: #fa0505;
 }
 
-.light-red {
-  color: #ffebf2;
+.dark-red {
+  color: #b30505;
+}
+
+.white {
+  color: #ffffff;
 }
 
 .medium-box {
@@ -72,9 +89,16 @@ button {
   padding-bottom: 10px;
 }
 
+.small-box,
+.medium-box,
+.large-box {
+  color: black;
+  background-color: #f4f4f6;
+}
+
 .box-header {
-  background-color: #474d71;
-  color: white;
+  background-color: #48b2f0;
+  color: black;
   margin-top: 0;
   display: flex;
   justify-content: center;

@@ -1,16 +1,13 @@
-export default function EmployerContacts() {
+export default function JobSearchActivities() {
   return (
-    <div id="employer-contacts" className="large-box">
+    <div id="job-search-activities" className="large-box">
       <div className="box-header">
-        <h3>Employer Contacts</h3>
-        <i className="far fa-check-circle light-green"></i>
-        <i className="far fa-times-circle light-red"></i>
+        <h3>Job Search Activities</h3>
+        <i className="far fa-check-circle dark-green"></i>
+        <i className="far fa-times-circle dark-red"></i>
       </div>
-      <div className="box-content">
-        <p>Employer Contacts:</p>
-        {orderedList()}
-      </div>
-      <button>Add New Employer Contact</button>
+      <div className="box-content">{orderedList()}</div>
+      <button id="add-new-activity">Add New Activity</button>
     </div>
   );
 }

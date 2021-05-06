@@ -3,8 +3,8 @@ export default function GithubCommits() {
     <div id="github-commits" className="medium-box">
       <div className="box-header">
         <h3>Github Commits</h3>
-        <i className="far fa-check-circle light-green"></i>
-        <i className="far fa-times-circle light-red"></i>
+        <i className="far fa-check-circle dark-green"></i>
+        <i className="far fa-times-circle dark-red"></i>
       </div>
       <div className="box-content">
         <p>Github Commits: [insert number]</p>
