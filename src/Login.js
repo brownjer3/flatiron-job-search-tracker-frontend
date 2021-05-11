@@ -26,13 +26,14 @@ class Login extends React.Component {
     }
 
     handleOnSubmit = e => {
-        
+        e.preventDefault()
+        this.props.handleLogin(this.state)
     }
 
     render(){
         return(
             <div className="login" style={ style.login }>
-                <h3>Flatiron Job Search Tracker</h3><br />
+                <h3 style={{ textAlign: 'center' }}>Flatiron<br />Job Search Tracker</h3><br />
                 <form style={ style.form } onSubmit={ this.handleOnSubmit }>
                     <input type="text" name="email" placeholder="Email" onChange={ this.handleOnChange } /><br />
                     <input type="text" name="password" placeholder="Password" onChange={ this.handleOnChange } /><br />
