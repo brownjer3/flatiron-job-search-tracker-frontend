@@ -1,16 +1,21 @@
 #header-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
-  text-align: center;
-  padding: 10px;
+  margin-top: 10px;
 }
 
 #header-container li {
   list-style: none;
 }
 
-nav a {
+nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li a {
   padding: 10px;
   box-shadow: 5px 5px 5px #1a191a;
   background-color: #474d71;

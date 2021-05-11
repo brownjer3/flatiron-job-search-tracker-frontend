@@ -105,6 +105,7 @@ button {
 .login form button {
   margin: 0;
   cursor: pointer;
+  font-size: 12px;
   transition: 0.5s;
 }
 
