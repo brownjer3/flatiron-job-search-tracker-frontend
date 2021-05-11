@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App" id="app-container">
-          <HeaderContainer />
+          { this.state.loggedIn ? <HeaderContainer /> : null }
           <Switch>
             <Route exact path="/login" render={ ()=> {
               return !this.state.loggedIn ? <Login toggleLogin={ this.toggleLogin } /> : <Redirect to="/" />

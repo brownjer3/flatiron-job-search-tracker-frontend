@@ -6,7 +6,7 @@ const style = {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '70vh'
+        height: '90vh'
     },
     form: {
         border: 'none',
@@ -19,7 +19,8 @@ class Login extends React.Component {
         email: '',
         password: '',
         displayAlert: false,
-        error: ''
+        error: '',
+        logo: '/images/Flatiron_School.png'
     }
 
     handleOnChange = e => {
@@ -82,6 +83,7 @@ class Login extends React.Component {
         return(
             <div className="login" style={ style.login }>
                 {/* <h3 style={{ textAlign: 'center' }}>Flatiron<br />Job Search Tracker</h3><br /> */}
+                <img src={ this.state.logo } alt="Logo" style={{ width: '100%', marginBottom: '10px', maxWidth: '300px' }} />
                 <form style={ style.form } onSubmit={ this.handleOnSubmit }>
                     <input type="text" name="email" placeholder="Email" onChange={ this.handleOnChange } /><br />
                     <input type="password" name="password" placeholder="Password" onChange={ this.handleOnChange } /><br />
