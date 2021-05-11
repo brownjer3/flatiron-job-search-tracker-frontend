@@ -13,36 +13,8 @@ class App extends Component {
     loggedIn: false
   }
 
-  handleLogin = data => {
-    let url = 'http://localhost:3000'
-
-    let loginObj = {
-      user: {
-        email: data.email,
-        password: data.password
-      }
-    }
-
-    let configObj = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(loginObj)
-    }
-
-    fetch(url + '/login', configObj)
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
-        if (!!data.error) {
-          console.log(data.error)
-        } else {
-          sessionStorage.setItem('jwt', data.jwt)
-          this.setState({ loggedIn: true })
-        }
-      })
+  toggleLogin = data => {
+    this.setState({ loggedIn: true })
   }
 
   handleLogout = () => {
@@ -60,7 +32,7 @@ class App extends Component {
           <HeaderContainer />
           <Switch>
             <Route exact path="/login" render={ ()=> {
-              return !this.state.loggedIn ? <Login handleLogin={ this.handleLogin } /> : <Redirect to="/" />
+              return !this.state.loggedIn ? <Login toggleLogin={ this.toggleLogin } /> : <Redirect to="/" />
               } } />
             <Route path="/contacts" render={ ()=>{
               return this.state.loggedIn ? <ContactsContainer /> : <Redirect to="/login" />

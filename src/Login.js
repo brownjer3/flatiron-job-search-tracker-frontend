@@ -6,20 +6,26 @@ const style = {
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '90vh'
+        height: '70vh'
     },
     form: {
-        border: 'none'
+        border: 'none',
+        minWidth: '300px'
     }
 }
 
 class Login extends React.Component {
     state = {
         email: '',
-        password: ''
+        password: '',
+        displayAlert: false,
+        error: ''
     }
 
     handleOnChange = e => {
+        if (!!this.state.displayAlert) {
+            this.setState({...this.state, displayAlert: false})
+        }
         this.setState({
             [e.target.name]: e.target.value
         })
@@ -27,17 +33,60 @@ class Login extends React.Component {
 
     handleOnSubmit = e => {
         e.preventDefault()
-        this.props.handleLogin(this.state)
+        let data = {
+            email: this.state.email,
+            password: this.state.password
+        }
+
+        this.handleLogin(data)
+    }
+
+    handleLogin = data => {
+        let url = 'http://localhost:3000'
+
+        let loginObj = {
+            user: {
+            email: data.email,
+            password: data.password
+            }
+        }
+
+        let configObj = {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+            },
+            body: JSON.stringify(loginObj)
+        }
+
+        fetch(url + '/login', configObj)
+            .then(res => res.json())
+            .then(data => {
+            console.log(data)
+            if (!!data.error) {
+                console.log(data.error)
+                this.setState({...this.state, displayAlert: true, error: data.error })
+            } else {
+                sessionStorage.setItem('jwt', data.jwt)
+                this.props.toggleLogin()
+            }
+        })
+    }
+
+    closeAlert = () => {
+        this.setState({...this.state, displayAlert: false })
     }
 
     render(){
         return(
             <div className="login" style={ style.login }>
-                <h3 style={{ textAlign: 'center' }}>Flatiron<br />Job Search Tracker</h3><br />
+                {/* <h3 style={{ textAlign: 'center' }}>Flatiron<br />Job Search Tracker</h3><br /> */}
                 <form style={ style.form } onSubmit={ this.handleOnSubmit }>
                     <input type="text" name="email" placeholder="Email" onChange={ this.handleOnChange } /><br />
                     <input type="password" name="password" placeholder="Password" onChange={ this.handleOnChange } /><br />
                     <button type="submit">Login</button>
+                    { this.state.displayAlert ? <div className="alert" onClick={ this.closeAlert }>{ this.state.error }</div> : null }
                 </form>
             </div>
         )

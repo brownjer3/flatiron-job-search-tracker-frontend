@@ -104,11 +104,31 @@ button {
 
 .login form button {
   margin: 0;
+  cursor: pointer;
+  transition: 0.5s;
 }
+
+  .login form button:hover {
+    background-color: #474d71;
+    color: #fff;
+  }
 
 .login form input,
 .login form button {
   height: 35px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 10px;
+  border: solid 1px #aaa;
+  width: 100%;
+  height: 35px;
+  background-color: rgb(213, 160, 160);
+  color: #fff;
 }
