@@ -95,3 +95,7 @@ button {
   max-width: 1000px;
   margin: auto;
 }
+
+.login form input {
+  margin-bottom: 10px;
+}
