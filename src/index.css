@@ -99,3 +99,8 @@ button {
 .login form input {
   margin-bottom: 10px;
 }
+
+.login form button {
+  width: 100%;
+  margin: 0;
+}
