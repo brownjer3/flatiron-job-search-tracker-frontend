@@ -20,7 +20,7 @@ class Login extends React.Component {
         password: '',
         displayAlert: false,
         error: '',
-        logo: '/images/Flatiron_School.png'
+        logo: '/images/flatiron-jst.png'
     }
 
     handleOnChange = e => {
