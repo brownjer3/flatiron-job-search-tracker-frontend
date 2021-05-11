@@ -45,13 +45,23 @@ class App extends Component {
       })
   }
 
+  handleLogout = () => {
+    this.setState({
+      loggedIn: false
+    }, ()=>{
+      sessionStorage.clear()
+    })
+  }
+
   render() {
     return (
       <Router>
         <div className="App" id="app-container">
           <HeaderContainer />
           <Switch>
-            <Route exact path="/login" render={ ()=> <Login handleLogin={ this.handleLogin } /> } />
+            <Route exact path="/login" render={ ()=> {
+              return !this.state.loggedIn ? <Login handleLogin={ this.handleLogin } /> : <Redirect to="/" />
+              } } />
             <Route path="/contacts" render={ ()=>{
               return this.state.loggedIn ? <ContactsContainer /> : <Redirect to="/login" />
             }} />
@@ -59,7 +69,7 @@ class App extends Component {
               return this.state.loggedIn ? <HistoryContainer /> : <Redirect to="/login" />
             }} />
             <Route path="/account" render={ ()=>{
-              return this.state.loggedIn ? <AccountContainer /> : <Redirect to="/login" />
+              return this.state.loggedIn ? <AccountContainer handleLogout={ this.handleLogout } /> : <Redirect to="/login" />
             }} />
             <Route path="/" render={ ()=>{
               return this.state.loggedIn ? <HomeContainer /> : <Redirect to="/login" />

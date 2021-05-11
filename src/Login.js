@@ -22,7 +22,7 @@ class Login extends React.Component {
     handleOnChange = e => {
         this.setState({
             [e.target.name]: e.target.value
-        }, ()=>console.log(this.state))
+        })
     }
 
     handleOnSubmit = e => {
@@ -36,7 +36,7 @@ class Login extends React.Component {
                 <h3 style={{ textAlign: 'center' }}>Flatiron<br />Job Search Tracker</h3><br />
                 <form style={ style.form } onSubmit={ this.handleOnSubmit }>
                     <input type="text" name="email" placeholder="Email" onChange={ this.handleOnChange } /><br />
-                    <input type="text" name="password" placeholder="Password" onChange={ this.handleOnChange } /><br />
+                    <input type="password" name="password" placeholder="Password" onChange={ this.handleOnChange } /><br />
                     <button type="submit">Login</button>
                 </form>
             </div>
