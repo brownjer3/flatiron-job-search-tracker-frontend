@@ -4,4 +4,37 @@
   align-items: center;
   margin: 0 auto;
   padding: 20px;
+  max-width: 500px;
 }
+
+.account-table {
+  border: solid 1px #ddd;
+  width: 100%;
+}
+
+  .account-table tr:nth-child(even) {
+    background-color: #fff;
+  }
+
+  .account-table tr td:first-child {
+    text-align: right;
+  }
+
+  .account-table tr td {
+    padding: 10px;
+  }
+
+  #account-container button {
+    margin-top: 10px;
+    background-color: rgb(157, 48, 48);
+    color: #fff;
+    border: solid 1px #ddd;
+    font-size: 12px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  #account-container button:hover {
+    background-color: rgb(70, 12, 12);
+  }

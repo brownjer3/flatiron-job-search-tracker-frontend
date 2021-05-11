@@ -19,11 +19,12 @@ class App extends Component {
   }
 
   toggleLogin = data => {
-    this.setState({ loggedIn: true })
+    this.setState({ loggedIn: true, currentUser: data })
   }
 
   handleLogout = () => {
     this.setState({
+      ...this.state,
       loggedIn: false
     }, ()=>{
       sessionStorage.clear()
@@ -71,7 +72,7 @@ class App extends Component {
               return this.state.loggedIn ? <HistoryContainer /> : <Redirect to="/login" />
             }} />
             <Route path="/account" render={ ()=>{
-              return this.state.loggedIn ? <AccountContainer handleLogout={ this.handleLogout } /> : <Redirect to="/login" />
+              return this.state.loggedIn ? <AccountContainer handleLogout={ this.handleLogout } currentUser={ this.state.currentUser } /> : <Redirect to="/login" />
             }} />
             <Route path="/" render={ ()=>{
               return this.state.loggedIn ? <HomeContainer /> : <Redirect to="/login" />

@@ -70,7 +70,7 @@ class Login extends React.Component {
                 this.setState({...this.state, displayAlert: true, error: data.error })
             } else {
                 sessionStorage.setItem('jwt', data.jwt)
-                this.props.toggleLogin()
+                this.props.toggleLogin(data.data)
             }
         })
     }
