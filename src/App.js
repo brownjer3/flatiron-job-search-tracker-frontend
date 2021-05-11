@@ -10,7 +10,12 @@ import './index.css'
 
 class App extends Component {
   state = {
-    loggedIn: false
+    loggedIn: false,
+    currentUser: null
+  }
+
+  componentDidMount(){
+    this.autoLogin()
   }
 
   toggleLogin = data => {
@@ -23,6 +28,31 @@ class App extends Component {
     }, ()=>{
       sessionStorage.clear()
     })
+  }
+
+  autoLogin = () => {
+    let url = 'http://localhost:3000'
+
+    if (sessionStorage.length > 0) {
+      let configObj = {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': `Bearer ${ sessionStorage.jwt }`
+        }
+      }
+
+      fetch(url + '/profile', configObj)
+        .then(res => res.json())
+        .then(data => {
+          if (!!data.error) {
+            console.log(data.error)
+          } else {
+            this.setState({ loggedIn: true, currentUser: data })
+          }
+        })
+    }
   }
 
   render() {
